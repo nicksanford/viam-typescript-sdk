@@ -135,6 +135,7 @@ export default class SessionManager {
 
     try {
       const startSessionReq = new robotApi.StartSessionRequest();
+      console.error("getSessionMetadata sending request");
       if (this.currentSessionID !== '') {
         startSessionReq.setResume(this.currentSessionID);
       }
