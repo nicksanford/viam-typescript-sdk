@@ -55,6 +55,7 @@ export default class SessionTransport implements grpc.Transport {
   }
 
   public start(metadata: grpc.Metadata) {
+    console.log('starting session managert transport');
     this.sessionManager
       .getSessionMetadata()
       .then((md) => {
